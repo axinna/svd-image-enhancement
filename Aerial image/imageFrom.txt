@@ -1,0 +1,14 @@
+1 nasa
+2 nasa
+3 nasa
+4£ºnasahttpsearthobservatory.nasa.govIOTDview.phpid=3502&eocn=related_to&eoci=related_image
+5
+https://earthobservatory.nasa.gov/IOTD/view.php?id=3295&eocn=related_to&eoci=related_image
+6
+https://eoimages.gsfc.nasa.gov/images/imagerecords/91000/91839/wabash_oli_2018062_swir_lrg.jpg
+7&8
+https://earthobservatory.nasa.gov/NaturalHazards/view.php?id=50896&eocn=image&eoci=related_image
+9&10
+https://eoimages.gsfc.nasa.gov/images/imagerecords/50000/50470/ohiorv_tm5_2010104_lrg.jpg
+11-14
+http://www.businessinsider.com/eerie-photos-of-air-pollution-in-china-2017-1

@@ -1,0 +1,77 @@
+clear all;
+close all;
+clc;
+%%
+originalImage=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\11.jpg');
+figure;imshow(originalImage);
+originalImage=im2double(originalImage);            %把图像unit8转换成double精度类型 参考：https://blog.csdn.net/colddie/article/details/6684834
+%% PART ONE: dwt of originalImage->LL LH HL HH ,and then svd of originalImage->
+%   U sigema V 
+[LL, HL, LH, HH] = dwt2(originalImage, 'haar');
+
+
+
+
+
+
+
+
+
+% [LL, HL, LH, HH] = dwt2(originalImage, 'haar');
+% finalImage = idwt2(LL, HL, LH, HH, 'haar');
+% finalImage=im2uint8(finalImage);  %把矩阵double转换成uint8类型
+% figure;imshow(finalImage);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
