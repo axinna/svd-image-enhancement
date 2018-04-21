@@ -1,6 +1,7 @@
-    sourcePic=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\11.jpg');  
+function [res]=GHE_color(sourcePic)
+    
     [m,n,o]=size(sourcePic);  
-    figure,imshow(sourcePic,[]);  
+    %figure,imshow(sourcePic,[]);  
     %grayPic=rgb2gray(sourcePic);  
     grayPic=sourcePic(:,:,1);  
       
@@ -85,4 +86,5 @@
       
       
     res=cat(3,nr,ng,nb);  
-    figure,imshow(res,[]);  
+%    figure,imshow(res,[]);  
+end
