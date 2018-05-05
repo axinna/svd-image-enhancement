@@ -3,7 +3,7 @@ clear all;
 close all;
 clc;
 %%
-originalImage=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\11.jpg');
+originalImage=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\0.jpg');
 figure;imshow(originalImage);
 %originalImage=im2double(originalImage);            %把图像unit8转换成double精度类型 参考：https://blog.csdn.net/colddie/article/details/6684834
 
@@ -37,7 +37,7 @@ figure;imshow(gheImage,[]);
 
 
 %% PART THREE:
-ParaOfWei=20; %parameter of weight
+ParaOfWei=1; %parameter of weight
 tmpr=0;
 tmpg=0;
 tmpb=0;
