@@ -3,7 +3,7 @@ clear all;
 close all;
 clc;
 %%
-originalImage=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\612.jpg');
+originalImage=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\11.jpg');
 originalImage=rgb2gray(originalImage);                                      %变灰度图
 figure;imshow(originalImage);title('原始图像');
 figure;
