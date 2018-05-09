@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  8 MAY 2018 21:53
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  9 MAY 2018 22:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,7 +1182,14 @@ Package: xeCJK-listings 2018/04/30 v3.7.1 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count286
 \l__xeCJK_listings_flag_int=\count287
 )
-(./version_0.aux)
+(./version_0.aux
+
+LaTeX Warning: Label `SSR' multiply defined.
+
+
+LaTeX Warning: Label `SSR' multiply defined.
+
+)
 \openout1 = `version_0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1327,30 +1334,48 @@ LaTeX Warning: Citation `？' on page 7 undefined on input line 60.
 
 [7
 
-] [8
-
 ]
+File: ./figures/histogramExample.eps Graphic file (type eps)
+<./figures/histogramExample.eps>
+File: ./figures/retinexSSR.png Graphic file (type bmp)
+<./figures/retinexSSR.png>
+ [8]
+File: ./figures/retinexSSR1.png Graphic file (type bmp)
+<./figures/retinexSSR1.png>
+File: ./figures/ssr2.eps Graphic file (type eps)
+<./figures/ssr2.eps>
+
+Overfull \hbox (15.66798pt too wide) in paragraph at lines 116--117
+ [][] 
+ []
+
+[9] [10]
 Chapter 3.
-[9] [10
+[11
 
-]
+] [12]
 Chapter 4.
-[11] [12
+[13
+
+] [14
 
 ]
 Chapter 5.
-[13] (./version_0.aux)
+[15] (./version_0.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 16924 strings out of 492970
- 380102 string characters out of 6137299
- 449537 words of memory out of 5000000
- 20758 multiletter control sequences out of 15000+600000
+ 16957 strings out of 492970
+ 381316 string characters out of 6137299
+ 452597 words of memory out of 5000000
+ 20783 multiletter control sequences out of 15000+600000
  535360 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 53i,6n,70p,10443b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,70p,10443b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on version_0.pdf (13 pages).
+Output written on version_0.pdf (15 pages).

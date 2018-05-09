@@ -7,8 +7,9 @@
 \contentsline {subsection}{\numberline {1.2.4}本文主要内容与结构}{6}
 \contentsline {chapter}{\numberline {2}常用的图像增强方法}{7}
 \contentsline {section}{\numberline {2.1}直方图均衡增强算法}{7}
-\contentsline {section}{\numberline {2.2}Retinex增强算法}{7}
-\contentsline {chapter}{\numberline {3}DWT-SVD增强算法}{9}
-\contentsline {section}{\numberline {3.1}}{9}
-\contentsline {chapter}{\numberline {4}实验结果及分析}{11}
-\contentsline {chapter}{\numberline {5}总结}{13}
+\contentsline {section}{\numberline {2.2}Retinex增强算法}{8}
+\contentsline {chapter}{\numberline {3}DWT-SVD增强算法}{11}
+\contentsline {section}{\numberline {3.1}奇异值分解算法}{11}
+\contentsline {subsection}{\numberline {3.1.1}奇异值分解的数学表达}{11}
+\contentsline {chapter}{\numberline {4}实验结果及分析}{13}
+\contentsline {chapter}{\numberline {5}总结}{15}

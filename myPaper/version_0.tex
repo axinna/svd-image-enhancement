@@ -61,10 +61,81 @@
 
 直方图均衡的目的是使原始图像原有的灰度分布即直方图，重新在一定的范围内“均匀”分布。而对于原始图像直方图具有的谷值和峰值，直方图均衡处理后仍具有原来的形状，并且变得平滑。以下将阐述直方图均衡的数学表达。
 
-句子图像处理p75
-		\section{Retinex增强算法}	
-	\chapter{DWT-SVD增强算法}
-		\section{}
+考虑连续的灰度值，用r表示原始出翔的灰度。假设r的取值区间是$[0,L-1]$，灰度值变换公式为
+\begin{equation}s=T(r),0 \leq r\leq L-1 \end{equation}
+%\begin{eqnarray*}
+%x^n+y^n &=& z^n \\
+%x+y &=& z
+%\end{eqnarray*}
+%其中两个&号之间的是公式间对齐的位置，用\\隔开各行公式。上面输出的公式是没有编号的，如果需要自动编号，可以将eqnarray*改为eqnarray 。 
+
+灰度变换公式满足以下条件
+			\begin{itemize}
+				\item \emph{$T(r)$在区间$0\leq r\leq L-1$上为单调递增函数。}
+				\item \emph{当$0\leq r\leq L-1$时，$0\leq T(r) \leq L-1$。}
+			\end{itemize}
+
+原始图像的灰度值可视为$[0,L-1]$内的随机变量。用概率密度函数（probability density function,PDF）来描述这些随机变量。有如下公式：
+\begin{equation}p_s(s)=p_r(r)|\frac{dr}{ds}|\end{equation}	
+其中$p_r(r)$表示随机变量$r$的概率密度函数，$p_s(s)$表示随机变量$s$的概率密度函数。并有如下公式：
+\begin{equation}     s=T(r)=(L-1)\int_0^r p_r(v)\,dv    \end{equation}	
+\begin{equation}     \frac{ds}{dr}=\frac{dT(r)}{dr}=(L-1)\frac{d}{dr}\left[\int_0^r p_r(v)\,dv 	\right]=(L-1)P_r(r)     \end{equation}
+\begin{equation}     p_s(s)=p_r(r) \left| \frac{dr}{ds}\right| =p_r(r) \left| \frac{1}{(L-1)p_r(r)} \right| = \frac{1}{L-1},0 \leq s \leq L-1    \end{equation}
+其中，v是积分假变量。公式的右边是随机变量$r$的累计分布函数（cumulative distribution function, CDF）。由公式$(2.5)$得知得到的$p_s(s)$始终是均匀的，与$P_r(r)$无关。简单的来说就是使原始图像的灰度直方图的累计分布函数均匀分布使得原始图像的对比度变高。以下是一个直方图均衡的例子：
+			\begin{figure}[!ht]\centering
+				\includegraphics[totalheight=60mm]{./figures/histogramExample.eps}
+				\caption{直方图均衡\label{histogram}}
+			\end{figure}
+从上图可以看出原本对比度很低，模糊不清的原始图像经过直方图均衡后变得更为清晰，视觉效果好。其中，均衡化后图像的灰度直方图形状与原图的灰度直方图相似，只不过被“拉伸"了。直方图均衡有助于图像的增强，但是也有过增强和细节变得更加模糊的缺点。
+		\section{Retinex增强算法}	Retinex（Retina-Cortex）理论是在1977年由Edwin Land提出的关于图像增强的理论，器阐述了人通过亮度感知捕捉色度图像在不同亮暗情况下辨认物体的能力。是研究人员模仿人类视觉系统而发展而成的算法，从单尺度Retinex(Single Scale Retinex,ssr)算法改进成多尺度加权平均的Retinex算法（Multi Scale Retinex,msr），再发展成彩色恢复多尺度Retinex算法。一下详细介绍单尺度Retinex算法。
+
+一幅给定图像$s(x,y)$可以分解为两个不同的图像：反射图像$r(x,y)$和亮度图像$L$，原理图如下：
+			\begin{figure}[!ht]\centering
+				\includegraphics[totalheight=60mm]{./figures/retinexSSR.png}
+				\caption{SSR原理图\label{SSR}}
+			\end{figure}
+
+如上图所示，入射光照射在反射物体上，通过反射物体的反射形成反射光进入人眼，得到人所见到的图像，用公式表达为：
+\begin{equation}     S(x,y)=R(x,y)L(x,y)    \end{equation}	
+其中，$L(x,y)$表示入射图像，他决定了图像中像素多能达到的动态范围，$R(x,y)$表示物体的反射性质图像，即图像的内在属性，$S(x,y)$表示人眼所能接收到的反射光图像。该理论的基本思想是在原始图像中，通过某种方法降低或去除入射图像的影响，从而尽可能保留物体本质的反射属性图像。其一般处理过程如下所示：
+			\begin{figure}[!ht]\centering
+				\includegraphics[totalheight=30mm,width=160mm]{./figures/retinexSSR1.png}
+				\caption{SSR原理图（这个图像要改）\label{SSR}}
+			\end{figure}
+
+我们把照射图像假设为空间平滑图像，可得单尺度Retinex算法公式为：
+\begin{equation}     r(x,y)=logR(x,y)=log \frac{S(x,y)}{L(x,y)}    \end{equation}
+\begin{equation}     r(x,y)=logS(x,y)-log \left[ F(x,y)*S(x,y) \right]    \end{equation}	
+\begin{equation}     F(x,y)=\lambda e^{\frac{-(x^2+y^2)}{c^2}}    \end{equation}	
+
+其中，$r(x,y)$为输出图像，$*$为卷积符号，$F(x,y)$为中心环绕函数，$c$表示高斯环绕尺度，$\lambda$是一个尺度，中心环绕函数$F(x,y)$的取值要满足
+\begin{equation}     \int\int F(x,y)\,dx \,dy=1    \end{equation}
+
+可以从上面的式子中看出SSR算法中的卷积可以看作是对空间中照度图像的计算，它的物理意义可以表示为通过计算图像中像素点和周围区域在加权平均来估计图像中照度的变化，并将其去除，最后只保留图像中物体的反射属性，从而达到增强的目的。中心环绕函数$F(x,y)$采用低通函数，能够在算法中估计出照射图像所对应的原始图像的低频部分，留下对应的高频部分即边缘信息。所以SSR算法可以较好的增强图像中的边缘信息。以下将展示SSR算法的增强效果。
+			\begin{figure}[!ht]\centering
+				\includegraphics[totalheight=60mm]{./figures/ssr2.eps}
+				\caption{SSR增强算法\label{SSR}}
+			\end{figure}
+
+从上图中可见，图2.4增强效果好，突出了图像细节，符合人眼感官。从图2.4的灰度直方图中可见，图中形状和图2.1中的灰度直方图相似，对比度加强，即同样被更加适当的“拉伸”了。
+	\chapter{DWT-SVD增强算法}这里是概括
+		\section{奇异值分解算法}SVD是最小二乘意义下的最优矩阵分解，它将最大信号能量尽可能地分解为尽可能少的系数。奇异值分解（Singular Value Decomposition, SVD）是一种稳定而有效的方法，将系统分解为一组线性无关的分量，每个分量都对系统有一定程度上的贡献。奇异值分解是数值分析中用于对角化矩阵的数值技术。由于SVD具有无穷无尽的优点，如压缩中，在两个独特的子空间数据和噪声子空间的基础上处理图像的能力，所以SVD是一种有吸引力的图像处理代数变换，它通常用于噪声过滤，也被用于水印应用。这些应用程序中的每一个都利用了SVD的关键属性。奇异值分解是鲁棒可靠的正交矩阵分解方法，这是由于其概念和稳定性原因在信号处理领域越来越流行。本文主要介绍奇异值在图像增强的的应用。以下介绍奇异值分解的数学表达。
+			\subsection{奇异值分解的数学表达}在线性代数中，SVD是矩阵实数或复数矩阵的分解，类似于使用特征向量的基础的对称或厄密特矩阵的数量化。 SVD是将系统分解为一组线性独立分量的稳定且有效的方法，具有$N \leq M$的尺寸为$M×N$的数字图像$X$可以通过其如下的SVD来表示;
+\begin{equation}	\left[ X \right] _{N×M}=\left[ U \right] _{M×M} \left[ S \right] _{M×N} \left[ V \right] ^T_{N×N}	\end{equation}			
+\[ U=[u_1,u_2....u_m],	V=[v_1,v_2....v_n] \]
+\[
+S
+=\begin{bmatrix}
+s_1  &  0  & \cdots\ &0\\
+0  &  s_2  & \cdots\ & 0\\
+ \vdots   & \vdots & \ddots  & \vdots  \\
+ 0 & 0  & \cdots\ & s_n\\
+\end{bmatrix}
+\]
+
+其中$U$是$M×M$的正交矩阵，$V$是$N×N$的正交矩阵，$S$是$M×N$的矩阵，并且对角元素$s_i$是矩阵$X$的奇异值,下标$T$表示矩阵的转置。正交矩阵$U$的列被称为左奇异向量(Left Singular Vector, LSV)，正交矩阵$V$的列被称为右奇异向量(Right Singular Vector, RSV)。$X$的左奇异向量是$XX^T$的特征向量，$X$的右奇异向量是$X^TX$的特征向量。每个奇异值（singular value,SV）指定图像层的亮度，而相应的奇异向量指定图像的几何形状。 U和V是正交矩阵（每列的平方和是独立的，且每个列互不相关），$S$是奇异值递减的对角矩阵。%每个特征图像的奇异值就是它的2-范数。因为SVD使最大奇异值最大化，所以第一特征图像是占最大量的方差 - 协方差结构的模式
+哈哈
+
 		小波变换-数字图像处理p320
 	\chapter{实验结果及分析}指标
 
