@@ -7,6 +7,8 @@
 \usepackage{url}
 \usepackage{listings}
 \usepackage{cite}
+\usepackage{subfigure}
+\usepackage{caption}
 % \setmainfont{Caladea}
 
 \lstset{
@@ -134,9 +136,44 @@ s_1  &  0  & \cdots\ &0\\
 \]
 
 其中$U$是$M×M$的正交矩阵，$V$是$N×N$的正交矩阵，$S$是$M×N$的矩阵，并且对角元素$s_i$是矩阵$X$的奇异值,下标$T$表示矩阵的转置。正交矩阵$U$的列被称为左奇异向量(Left Singular Vector, LSV)，正交矩阵$V$的列被称为右奇异向量(Right Singular Vector, RSV)。$X$的左奇异向量是$XX^T$的特征向量，$X$的右奇异向量是$X^TX$的特征向量。每个奇异值（singular value,SV）指定图像层的亮度，而相应的奇异向量指定图像的几何形状。 U和V是正交矩阵（每列的平方和是独立的，且每个列互不相关），$S$是奇异值递减的对角矩阵。%每个特征图像的奇异值就是它的2-范数。因为SVD使最大奇异值最大化，所以第一特征图像是占最大量的方差 - 协方差结构的模式
-哈哈
 
 		小波变换-数字图像处理p320
+		\section{小波变换理论}在数值分析和功能分析中，离散小波变换（Discrete Wavelet Transform, DWT）是对任何小波进行离散采样的小波变换。 。小波变换的基本思想是可变窗口的平移和伸缩的基本思想。Haar基是一种最简单的小波基，具有不连续性的特点。小波变换能自动调节频率窗口和时间窗口并能使频域和时域同时进行局部变换，这一特点是小波变换优于傅里叶变换的地方。小波的特点有：长度有限，均值为零。小波变换能够使用伸缩和平移的特性从多个角度细化目标函数。
+			\subsection{离散小波变换}二维离散小波变换是连续信号离散化后的小波变换，可以用来分析诸如图像的二维离散信号，并在图像压缩领域，数字水印领域，图像融合领域皆有所应用。本文着重强调其在图像增强上的应用。DWT示意图图如下所示：
+				\begin{figure}[!ht]\centering
+					\includegraphics[totalheight=40mm,width=160mm]{./figures/DWT.jpg}
+					\caption{DWT二级小波变换分解图\label{DWT}}	
+				\end{figure}		
+
+其中，$L$是高低滤波器，$H$是高通滤波器。原始图像经过以及分解后会得到$LL_1$、$HL_1$、$LH_1$、$HH_1$四个子带，子带即一幅图像被分解为一组频带受限的分量，并且子带可以重组在一个构成无误差的原始图像。$LL_1$是水平及垂直方向上的低频子带，$LH_1$是水平方向上低频并且垂直方向上高频的子带，$HL_1$是水平方向上高频并且垂直方向上低频的子带，$HH_1$是水平及垂直方向上都高频的子带。而$LL_2$、$HL_2$、$LH_2$、$HH_2$是子带$LL_1$再次进行一次DWT运算的子带。现在以第一次小波分解为例，进行演示。
+				\begin{figure}[ht]
+					\begin{minipage}{0.48\linewidth}
+						\centerline{\includegraphics[width=1\textwidth]{./figures/LL.eps}}
+						\centerline{LL}
+					\end{minipage}
+					\qquad
+					\begin{minipage}{0.48\linewidth}
+						\centerline{\includegraphics[width=1\textwidth]{./figures/HL.eps}}
+						\centerline{HL}
+					\end{minipage}
+
+					\begin{minipage}{0.48\linewidth}
+						\centerline{\includegraphics[width=1\textwidth]{./figures/LH.eps}}
+						\centerline{LH}
+					\end{minipage}
+					\qquad
+					\begin{minipage}{0.48\linewidth}
+						\centerline{\includegraphics[width=1\textwidth]{./figures/HH.eps}}
+						\centerline{HH}
+					\end{minipage}
+					\caption{DWT示例\label{DWT}}
+				\end{figure}
+
+下一步：LL=0矩阵 然后融合
+dwt：轮廓保留  
+svd：内容增强
+
+		\section{DWT-SVD算法}本文提出的DWT-SVD算法分成为两个部分第一个部分是使用
 	\chapter{实验结果及分析}指标
 
 	\chapter{总结}

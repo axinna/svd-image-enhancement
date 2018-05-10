@@ -11,5 +11,8 @@
 \contentsline {chapter}{\numberline {3}DWT-SVD增强算法}{11}
 \contentsline {section}{\numberline {3.1}奇异值分解算法}{11}
 \contentsline {subsection}{\numberline {3.1.1}奇异值分解的数学表达}{11}
-\contentsline {chapter}{\numberline {4}实验结果及分析}{13}
-\contentsline {chapter}{\numberline {5}总结}{15}
+\contentsline {section}{\numberline {3.2}小波变换理论}{12}
+\contentsline {subsection}{\numberline {3.2.1}离散小波变换}{12}
+\contentsline {section}{\numberline {3.3}DWT-SVD算法}{13}
+\contentsline {chapter}{\numberline {4}实验结果及分析}{15}
+\contentsline {chapter}{\numberline {5}总结}{17}

@@ -56,4 +56,19 @@ subplot(426);imhist(ssrImage);          set(gca,'xtick',-inf:inf:inf);
 subplot(427);imshow(newImage,[]);       
 subplot(428);imhist(newImage/256);      set(gca,'xtick',-inf:inf:inf);  %由于格式问题：/256
 
+%% waveTest
+sizeLL=size(LL);
+ReplaceBlack   = zeros(sizeLL(1),sizeLL(2));
+ReplaceImageLL = idwt2(ReplaceBlack, HL, LH, HH, 'haar');
+ReplaceImageAll= idwt2(newLL, ReplaceBlack, ReplaceBlack, ReplaceBlack, 'haar');
+figure;
+subplot(221);imshow(HL);subplot(222);imshow(LH);
+subplot(223);imshow(HH);subplot(224);imshow(ReplaceImageLL);
+
+figure;imhist(newLL/max(max(newLL)));title('newLL')
+figure;imshow(newLL,[]);title('newLL')
+figure;imshow(newImage,[]);title('newImage')
+figure;imshow(newImage,[]);title('ReplaceImageAll')
+
+figure;imshow([LL HL;LH HH],[]);title('DWT')
 
