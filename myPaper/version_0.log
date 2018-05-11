@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  10 MAY 2018 18:06
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  11 MAY 2018 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1227,6 +1227,18 @@ LaTeX Warning: Label `SSR' multiply defined.
 
 LaTeX Warning: Label `SSR' multiply defined.
 
+
+LaTeX Warning: Label `DWT' multiply defined.
+
+
+LaTeX Warning: Label `DWT' multiply defined.
+
+
+LaTeX Warning: Label `DWT' multiply defined.
+
+
+LaTeX Warning: Label `DWT' multiply defined.
+
 )
 \openout1 = `version_0.aux'.
 
@@ -1382,14 +1394,15 @@ File: ./figures/retinexSSR.png Graphic file (type bmp)
  [8]
 File: ./figures/retinexSSR1.png Graphic file (type bmp)
 <./figures/retinexSSR1.png>
+ [9]
 File: ./figures/ssr2.eps Graphic file (type eps)
 <./figures/ssr2.eps>
 
-Overfull \hbox (15.66798pt too wide) in paragraph at lines 118--119
+Overfull \hbox (15.66798pt too wide) in paragraph at lines 120--121
  [][] 
  []
 
-[9] [10]
+[10]
 Chapter 3.
 [11
 
@@ -1401,7 +1414,7 @@ File: ./figures/LL.eps Graphic file (type eps)
 File: ./figures/HL.eps Graphic file (type eps)
 <./figures/HL.eps>
 
-Overfull \hbox (7.15352pt too wide) in paragraph at lines 150--159
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 152--161
 []$[]$  $[]$ 
  []
 
@@ -1410,19 +1423,43 @@ File: ./figures/LH.eps Graphic file (type eps)
 File: ./figures/HH.eps Graphic file (type eps)
 <./figures/HH.eps>
 
-Overfull \hbox (7.15352pt too wide) in paragraph at lines 160--169
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 162--171
 []$[]$  $[]$ 
  []
 
-[12] [13] [14
+[12]
+File: ./figures/replaceImageLL.eps Graphic file (type eps)
+<./figures/replaceImageLL.eps>
 
-]
+
+LaTeX Warning: Citation `improved...' on page 13 undefined on input line 183.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+File: ./figures/flowChatOfDWTSVD.jpg Graphic file (type bmp)
+<./figures/flowChatOfDWTSVD.jpg>
+
+[14]
+File: ./figures/originalImage.eps Graphic file (type eps)
+<./figures/originalImage.eps>
+File: ./figures/DWTSVDExample.eps Graphic file (type eps)
+<./figures/DWTSVDExample.eps>
+
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 203--212
+[]$[]$  $[]$ 
+ []
+
+[15] [16]
 Chapter 4.
-[15] [16
+[17
+
+] [18
 
 ]
 Chapter 5.
-[17] (./version_0.aux)
+[19] (./version_0.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1431,12 +1468,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18192 strings out of 492970
- 403668 string characters out of 6137299
- 471306 words of memory out of 5000000
- 22000 multiletter control sequences out of 15000+600000
+ 18239 strings out of 492970
+ 406092 string characters out of 6137299
+ 474306 words of memory out of 5000000
+ 22043 multiletter control sequences out of 15000+600000
  535360 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  53i,9n,70p,10443b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on version_0.pdf (17 pages).
+Output written on version_0.pdf (19 pages).

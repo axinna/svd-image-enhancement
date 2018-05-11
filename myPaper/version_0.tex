@@ -89,6 +89,8 @@
 				\caption{直方图均衡\label{histogram}}
 			\end{figure}
 从上图可以看出原本对比度很低，模糊不清的原始图像经过直方图均衡后变得更为清晰，视觉效果好。其中，均衡化后图像的灰度直方图形状与原图的灰度直方图相似，只不过被“拉伸"了。直方图均衡有助于图像的增强，但是也有过增强和细节变得更加模糊的缺点。
+
+虽然直方图均衡化后的效果比原始图像好，但是所得的图像在一些轮廓和细节方面处理是不如其他常用的增强算法的，会产生轮廓的模糊等现象。
 		\section{Retinex增强算法}	Retinex（Retina-Cortex）理论是在1977年由Edwin Land提出的关于图像增强的理论，器阐述了人通过亮度感知捕捉色度图像在不同亮暗情况下辨认物体的能力。是研究人员模仿人类视觉系统而发展而成的算法，从单尺度Retinex(Single Scale Retinex,ssr)算法改进成多尺度加权平均的Retinex算法（Multi Scale Retinex,msr），再发展成彩色恢复多尺度Retinex算法。一下详细介绍单尺度Retinex算法。
 
 一幅给定图像$s(x,y)$可以分解为两个不同的图像：反射图像$r(x,y)$和亮度图像$L$，原理图如下：
@@ -169,11 +171,58 @@ s_1  &  0  & \cdots\ &0\\
 					\caption{DWT示例\label{DWT}}
 				\end{figure}
 
-下一步：LL=0矩阵 然后融合
-dwt：轮廓保留  
-svd：内容增强
+这里图像的频率指的是图像中灰度变化剧烈强度，是灰度平面上的梯度。图像中的高频分量，指的是图像强度（亮度、灰度）变化剧烈的地方，即边缘（轮廓）以及细节特征。图像中的低频分量，指的是图像强度（亮度、灰度）变换平缓的地方，即大片色块的地方。从图$3.2$中可以看出子带$LL$中包含了原始图像的大部分信息，子带$HL$中主要包含了原始图像的水平方向的轮廓信息，子带$HL$中主要包含了原始图像的垂直方向的轮廓信息，子带$HH$中主要包含了原始图像的轮廓信息及其噪声。以下将展示离散小波变换在保留图像轮廓中的应用。
 
-		\section{DWT-SVD算法}本文提出的DWT-SVD算法分成为两个部分第一个部分是使用
+图$3.3$是子带$HL$、$LH$、$HH$与一个横列分别与子带$LL$相同的零矩阵（即规模相同的全黑矩阵）进行离散小波反变换（IDWT）的结果图，从中可以看出离散小波反变换可以将子带$HL$、$LH$、$HH$还原成一幅保留原始图像大致轮廓的轮廓图。并且用离散小波反变换将子带$LL$、$HL$、$LH$、$HH$还原而成的图像将于原始图像一致，不会有数据丢失。
+			\begin{figure}[!ht]\centering
+				\includegraphics[totalheight=60mm]{./figures/replaceImageLL.eps}
+				\caption{DWT在保留轮廓中的应用\label{DWT}}
+			\end{figure}
+
+
+	\section{DWT-SVD算法}本文提出的基于DWT-SVD算法的航空图像增强分成为两个部分，第一个部分是使用奇异值分解获得原始图像的奇异值矩阵，改变奇异值矩阵中的数值将会直接影响到图像的亮度并且其余信息保持不变\cite{improved...}。第二部分，是使用直方图均衡，使目标图像的对比度增强。第三部分是使用离散小波变换对原始图像进行处理以保留原始图像的主要轮廓和图像细节，以便进行还原是最终图像有较好的对比度和图像细节。
+
+首先，对输入的灰度航空图像‘$A$’进行直方图均衡处理生成‘$A^*$’,在得到‘$A^*$’后对图像‘$A$’和图像‘$A^*$’进行离散小波变换，分别得到子带$LL$、$HL$、$LH$、$HH$和子带$LL^*$、$HL^*$、$LH^*$、$HH^*$。第二部分别对子带$LL$和$LL^*$进行奇异值分解得到$U_{LL}$、$S_{LL}$、$V_{LL}$和$U_ {LL^*}$、$S_{LL^*}$、$V_{LL^*}$。然后通过下式计算两个奇异值矩阵的相关系数：
+\begin{equation}     \xi = \frac{max \left( S_{LL^*} \right) }{ max \left( S_{LL} \right) }    \end{equation}
+
+其中，$S_{LL}$是原始图像$A$的低频系数奇异矩阵，$S_{LL^*}$是原始图像经过直方图均衡化后得到的图像$A^*$的低频系数奇异矩阵。
+\begin{equation}     \bar{S}_{LL} = \xi S_{LL}    \end{equation}
+\begin{equation}     \bar{LL} =  U_{LL} \bar{S}_{LL} V_{LL} \end{equation}
+
+式$3.2$和式子$3.3$的效果是将使直方图均衡化后的图像‘$A^*$’（或是包含了‘$A^*$’大部分信息的子带$LL^*$）所具有的使图像对比度增强的性质赋予了子带$LL$产生新的子带$\bar{LL}$。式$3.4$中的$\bar{LL}$为低频系数矩阵$S_{LL}$经过奇异值矩阵的相关系数$\xi$增强后再经过奇异值分解公式得到的结果。然后在对进行$\bar{LL}$、$HL$、$LH$、$HH$进行离散小波变换：
+\begin{equation}     \bar{A} = IDWT(\bar{LL},HL,LH,HH)    \end{equation}
+
+由于直方图均衡能使图像对比度增强，视觉效果好。离散小波变换能使图像保留原有的轮廓信息和图像细节。然后通过奇异值分解“连接”这两个算法。这样使得了最终图像$\bar{A}$具有更好的视觉效果和更多的轮廓信息，以达到图像增强的效果。以下展示DWT-SVD的算法流程图：
+			\begin{figure}[!ht]\centering
+				\includegraphics[]{./figures/flowChatOfDWTSVD.jpg}
+				\caption{DWT-SVD的算法流程图\label{DWT}}
+			\end{figure}
+
+以下将展示原始图像经过DWT-SVD算法增强后的结果：
+				\begin{figure}[ht]
+					\begin{minipage}{0.48\linewidth}
+						\centerline{\includegraphics[width=1\textwidth]{./figures/originalImage.eps}}
+						\centerline{原始图像}
+					\end{minipage}
+					\qquad
+					\begin{minipage}{0.48\linewidth}
+						\centerline{\includegraphics[width=1\textwidth]{./figures/DWTSVDExample.eps}}
+						\centerline{DWT-SVD增强处理}
+					\end{minipage}
+					\caption{DWT-SVD示例\label{DWT}}
+				\end{figure}
+
+可以从图
+
+
+
+
+
+%下一步：LL=0矩阵 然后融合
+%dwt：轮廓保留  
+%svd：内容增强
+
+		
 	\chapter{实验结果及分析}指标
 
 	\chapter{总结}
