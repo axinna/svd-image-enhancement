@@ -1,0 +1,26 @@
+		mean		std		熵
+11.jpg
+original	140.48		21.35		6.07
+GHE		129.6142	73.47		6.0489
+ssr		163.4947	53.2444		7.1981
+OUTPUT		147.93		58.64		7.4767
+		
+\begin{table}[!htbp]
+    \bicaption{客观指标}{This is a sample table.}
+    \label{tab:sample}
+    \centering
+    \footnotesize% fontsize
+    \setlength{\tabcolsep}{4pt}% column separation
+    \renewcommand{\arraystretch}{1.2}%row space 
+    \begin{tabular}{lcccccccc}
+        \hline
+        Algorithm     & Mean     & Std  & Entropy} \\
+        %\cline{2-9}% partial hline from column i to column j
+        \hline
+        Raw Image     & $140.48$ & $21.35$ & $6.07$ \\
+        HE            & $129.61$ & $73.47$ & $6.04$ \\
+        SSR           & $163.49$ & $53.24$ & $7.19$ \\
+        DWT-SVD       & $147.93$ & $58.64$ & $7.47$ \\
+        \hline
+    \end{tabular}
+\end{table}

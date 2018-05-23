@@ -12,9 +12,9 @@ figure;
 %%
 [LL   HL    LH    HH] = dwt2(originalImage, 'haar'); %奇怪！amazing！
 %%%%%%%%%%%%%%%%%%%%%LL在部分图片直接出现了去雾效果
-figure;imshow(LL,[])
-idwt2(LL, HL, LH, HH, 'haar');
-figure;imshow(ans,[])
+%figure;imshow(LL,[])
+%idwt2(LL, HL, LH, HH, 'haar');
+%figure;imshow(ans,[])
 %%%%%%%%%%%%%%%%%%%%%%%
 [U    S     V       ] = svd(LL, 'econ');
 
@@ -36,18 +36,10 @@ figure;imhist(newImage/256);
 
 % finalImage=im2uint8(finalImage);  %把矩阵double转换成uint8类型
 % figure;imshow(finalImage);
-%% 评价指标 均值 标准差 信息熵 清晰度 
-oriImgMean=mean2(originalImage)
-oriImgStd =std2(originalImage)
 
-gheImgMean=mean2(gheImage)
-gheImgStd =std2(gheImage)
-
-newImgMean=mean2(newImage)
-newImgStd =std2(newImage)
 
 %% histogram image
-
+load('ssr16.mat'); 
 load('ssr11.mat'); 
 ssrImage=ssr11; 
 figure;imshow(ssrImage);title('ssr');

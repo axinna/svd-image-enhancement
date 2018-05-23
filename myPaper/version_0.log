@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  11 MAY 2018 20:59
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  23 MAY 2018 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,6 +1189,18 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 )
+(j:/texlive/2018/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2014/09/29 v2.1h Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen256
+)
+(j:/texlive/2018/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
 (j:/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/03/24 v5.7 Page Geometry
 
@@ -1205,14 +1217,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count288
 \Gm@cntv=\count289
 \c@Gm@tempcnt=\count290
-\Gm@bindingoffset=\dimen256
-\Gm@wd@mp=\dimen257
-\Gm@odd@mp=\dimen258
-\Gm@even@mp=\dimen259
-\Gm@layoutwidth=\dimen260
-\Gm@layoutheight=\dimen261
-\Gm@layouthoffset=\dimen262
-\Gm@layoutvoffset=\dimen263
+\Gm@bindingoffset=\dimen257
+\Gm@wd@mp=\dimen258
+\Gm@odd@mp=\dimen259
+\Gm@even@mp=\dimen260
+\Gm@layoutwidth=\dimen261
+\Gm@layoutheight=\dimen262
+\Gm@layouthoffset=\dimen263
+\Gm@layoutvoffset=\dimen264
 \Gm@dimlist=\toks23
 )
 (j:/texlive/2018/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
@@ -1220,46 +1232,27 @@ Package: xeCJK-listings 2018/04/30 v3.7.1 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count291
 \l__xeCJK_listings_flag_int=\count292
 )
-(./version_0.aux
-
-LaTeX Warning: Label `SSR' multiply defined.
-
-
-LaTeX Warning: Label `SSR' multiply defined.
-
-
-LaTeX Warning: Label `DWT' multiply defined.
-
-
-LaTeX Warning: Label `DWT' multiply defined.
-
-
-LaTeX Warning: Label `DWT' multiply defined.
-
-
-LaTeX Warning: Label `DWT' multiply defined.
-
-)
+(./version_0.aux)
 \openout1 = `version_0.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 33.
+LaTeX Info: Redefining \selectfont on input line 35.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1267,56 +1260,56 @@ LaTeX Info: Redefining \selectfont on input line 33.
 .................................................
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 33.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 33.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 33.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 33.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 33.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 33.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 33.
-LaTeX Font Info:    Redeclaring math accent \check on input line 33.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 33.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 33.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 33.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 33.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 33.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 35.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 35.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 35.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 35.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 35.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 35.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 35.
+LaTeX Font Info:    Redeclaring math accent \check on input line 35.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 35.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 35.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 35.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 35.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 33.
+(Font)              `operators' in the math version `normal' on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 33.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 35.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 33.
+(Font)              `operators' in the math version `bold' on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 33.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 33.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 33.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 33.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 33.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 33.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 33.
+(Font)                  TU/lmr/m/n --> TU/lmr/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 33.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/bx/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 33.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 33.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 35.
 \c@lstlisting=\count293
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -1355,6 +1348,8 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 36.
 [1
 
 
@@ -1367,46 +1362,50 @@ Package caption Info: End \AtBeginDocument code.
  [3]
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-38.
+41.
  [4
 
 ]
 Chapter 1.
 
-LaTeX Warning: Citation `？' on page 5 undefined on input line 43.
+LaTeX Warning: Citation `？' on page 5 undefined on input line 48.
 
 [5]
 
-LaTeX Warning: Citation `？' on page 6 undefined on input line 51.
+LaTeX Warning: Citation `？' on page 6 undefined on input line 56.
 
 [6]
-Chapter 2.
-
-LaTeX Warning: Citation `？' on page 7 undefined on input line 62.
-
-[7
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <6> on input line 67.
+ [7] [8
 
 ]
+Chapter 2.
+
+LaTeX Warning: Citation `？' on page 9 undefined on input line 89.
+
+[9]
 File: ./figures/histogramExample.eps Graphic file (type eps)
 <./figures/histogramExample.eps>
+ [10] [11] [12]
 File: ./figures/retinexSSR.png Graphic file (type bmp)
 <./figures/retinexSSR.png>
- [8]
 File: ./figures/retinexSSR1.png Graphic file (type bmp)
 <./figures/retinexSSR1.png>
- [9]
+ [13]
 File: ./figures/ssr2.eps Graphic file (type eps)
 <./figures/ssr2.eps>
 
-Overfull \hbox (15.66798pt too wide) in paragraph at lines 120--121
+Overfull \hbox (15.66798pt too wide) in paragraph at lines 172--173
  [][] 
  []
 
-[10]
+[14]
 Chapter 3.
-[11
+Missing character: There is no ： in font [lmroman12-regular]:mapping=tex-text;!
+[15
 
-]
+] [16]
 File: ./figures/DWT.jpg Graphic file (type bmp)
 <./figures/DWT.jpg>
 File: ./figures/LL.eps Graphic file (type eps)
@@ -1414,7 +1413,7 @@ File: ./figures/LL.eps Graphic file (type eps)
 File: ./figures/HL.eps Graphic file (type eps)
 <./figures/HL.eps>
 
-Overfull \hbox (7.15352pt too wide) in paragraph at lines 152--161
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 210--219
 []$[]$  $[]$ 
  []
 
@@ -1423,57 +1422,95 @@ File: ./figures/LH.eps Graphic file (type eps)
 File: ./figures/HH.eps Graphic file (type eps)
 <./figures/HH.eps>
 
-Overfull \hbox (7.15352pt too wide) in paragraph at lines 162--171
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 220--229
 []$[]$  $[]$ 
  []
 
-[12]
 File: ./figures/replaceImageLL.eps Graphic file (type eps)
 <./figures/replaceImageLL.eps>
 
+LaTeX Warning: Citation `improved...' on page 17 undefined on input line 241.
 
-LaTeX Warning: Citation `improved...' on page 13 undefined on input line 183.
+
+Underfull \vbox (badness 2653) has occurred while \output is active []
+
+ [17]
+Overfull \vbox (3.25893pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
+[18]
 File: ./figures/flowChatOfDWTSVD.jpg Graphic file (type bmp)
 <./figures/flowChatOfDWTSVD.jpg>
-
-[14]
 File: ./figures/originalImage.eps Graphic file (type eps)
 <./figures/originalImage.eps>
 File: ./figures/DWTSVDExample.eps Graphic file (type eps)
 <./figures/DWTSVDExample.eps>
 
-Overfull \hbox (7.15352pt too wide) in paragraph at lines 203--212
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 261--270
 []$[]$  $[]$ 
  []
 
-[15] [16]
-Chapter 4.
-[17
-
-] [18
+[19] [20] [21] [22
 
 ]
+Chapter 4.
+[23]
+File: ./figures/originalImage.eps Graphic file (type eps)
+<./figures/originalImage.eps>
+File: ./figures/HE11.eps Graphic file (type eps)
+<./figures/HE11.eps>
+
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 304--313
+[]$[]$  $[]$ 
+ []
+
+File: ./figures/ssr11.eps Graphic file (type eps)
+<./figures/ssr11.eps>
+File: ./figures/DWTSVD11.eps Graphic file (type eps)
+<./figures/DWTSVD11.eps>
+
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 314--323
+[]$[]$  $[]$ 
+ []
+
+[24]
+File: ./figures/originalImage16.eps Graphic file (type eps)
+<./figures/originalImage16.eps>
+File: ./figures/HE16.eps Graphic file (type eps)
+<./figures/HE16.eps>
+
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 345--354
+[]$[]$  $[]$ 
+ []
+
+File: ./figures/ssr16.eps Graphic file (type eps)
+<./figures/ssr16.eps>
+File: ./figures/DWTSVD16.eps Graphic file (type eps)
+<./figures/DWTSVD16.eps>
+
+Overfull \hbox (7.15352pt too wide) in paragraph at lines 355--364
+[]$[]$  $[]$ 
+ []
+
+[25] [26]
 Chapter 5.
-[19] (./version_0.aux)
+[27
+
+] (./version_0.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 18239 strings out of 492970
- 406092 string characters out of 6137299
- 474306 words of memory out of 5000000
- 22043 multiletter control sequences out of 15000+600000
- 535360 words of font info for 66 fonts, out of 8000000 for 9000
+ 18356 strings out of 492970
+ 409330 string characters out of 6137299
+ 477235 words of memory out of 5000000
+ 22146 multiletter control sequences out of 15000+600000
+ 535133 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  53i,9n,70p,10443b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on version_0.pdf (19 pages).
+Output written on version_0.pdf (27 pages).
