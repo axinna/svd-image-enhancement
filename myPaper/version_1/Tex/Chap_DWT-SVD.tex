@@ -27,7 +27,7 @@ s_1  &  0  & \cdots\ &0\\
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.40\textwidth]{DWT}
+    \includegraphics[totalheight=40mm,width=160mm]{DWT}
     \bicaption{Q判据等值面图，同时测试一下一个很长的标题，比如这真的是一个很长很长很长很长很长很长很长很长的标题。}{Isocontour of Q criteria, at the same time, this is to test a long title, for instance, this is a really very long very long very long very long very long title.}
     \label{fig:tc_q_criteria}
 \end{figure}
@@ -40,26 +40,26 @@ s_1  &  0  & \cdots\ &0\\
 
 其中，$L$是高低滤波器，$H$是高通滤波器。原始图像经过以及分解后会得到$LL_1$、$HL_1$、$LH_1$、$HH_1$四个子带，子带即一幅图像被分解为一组频带受限的分量，并且子带可以重组在一个构成无误差的原始图像。$LL_1$是水平及垂直方向上的低频子带，$LH_1$是水平方向上低频并且垂直方向上高频的子带，$HL_1$是水平方向上高频并且垂直方向上低频的子带，$HH_1$是水平及垂直方向上都高频的子带。而$LL_2$、$HL_2$、$LH_2$、$HH_2$是子带$LL_1$再次进行一次DWT运算的子带。现在以第一次小波分解为例，进行演示。
 
-\begin{figure}[!htbp]
+\begin{figure}[htb!]
     \centering
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{LL}
       \caption{}
       \label{fig:oaspl_a}
     \end{subfigure}%
     ~%add desired spacing
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{HL}
       \caption{}
       \label{fig:oaspl_b}
     \end{subfigure}
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{LH}
       \caption{}
       \label{fig:oaspl_c}
     \end{subfigure}%
     ~%add desired spacing
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{HH}
       \caption{}
       \label{fig:oaspl_d}
@@ -95,9 +95,9 @@ s_1  &  0  & \cdots\ &0\\
 
 图$3.3$是子带$HL$、$LH$、$HH$与一个横列分别与子带$LL$相同的零矩阵（即规模相同的全黑矩阵）进行离散小波反变换（IDWT）的结果图，从中可以看出离散小波反变换可以将子带$HL$、$LH$、$HH$还原成一幅保留原始图像大致轮廓的轮廓图。并且用离散小波反变换将子带$LL$、$HL$、$LH$、$HH$还原而成的图像将于原始图像一致，不会有数据丢失。
 
-\begin{figure}[!htbp]
+\begin{figure}[htb!]
     \centering
-    \includegraphics[width=0.40\textwidth]{IDWTWithoutLL}
+    \includegraphics[width=0.75\textwidth]{IDWTWithoutLL}
     \bicaption{Q判据等值面图，同时测试一下一个很长的标题，比如这真的是一个很长很长很长很长很长很长很长很长的标题。}{Isocontour of Q criteria, at the same time, this is to test a long title, for instance, this is a really very long very long very long very long very long title.}
     \label{fig:tc_q_criteria}
 \end{figure}
@@ -120,11 +120,11 @@ s_1  &  0  & \cdots\ &0\\
 式$3.2$和式子$3.3$的效果是将使直方图均衡化后的图像‘$A^*$’（或是包含了‘$A^*$’大部分信息的子带$LL^*$）所具有的使图像对比度增强的性质赋予了子带$LL$产生新的子带$\bar{LL}$。式$3.4$中的$\bar{LL}$为低频系数矩阵$S_{LL}$经过奇异值矩阵的相关系数$\xi$增强后再经过奇异值分解公式得到的结果。然后在对进行$\bar{LL}$、$HL$、$LH$、$HH$进行离散小波变换：
 \begin{equation}     \bar{A} = IDWT(\bar{LL},HL,LH,HH)    \end{equation}
 
-由于直方图均衡能使图像对比度增强，视觉效果好。离散小波变换能使图像保留原有的轮廓信息和图像细节。然后通过奇异值分解“连接”这两个算法。这样使得了最终图像$\bar{A}$具有更好的视觉效果和更多的轮廓信息，以达到图像增强的效果。以下展示DWT-SVD的算法流程图：
+由于直方图均衡能使图像对比度增强，视觉效果好。离散小波变换能使图像保留原有的轮廓信息和图像细节。然后通过奇异值分解“连接”这两个算法。这样使得了最终图像$\bar{A}$具有更好的视觉效果和更多的轮廓信息，以达到图像增强的效果。图3.4展示DWT-SVD的算法流程图。
 
-\begin{figure}[!htbp]
+\begin{figure}[htb!]
     \centering
-    \includegraphics[width=0.40\textwidth]{flowChatOfDWTSVD}
+    \includegraphics[width=0.75\textwidth]{flowChatOfDWTSVD}
     \bicaption{Q判据等值面图，同时测试一下一个很长的标题，比如这真的是一个很长很长很长很长很长很长很长很长的标题。}{Isocontour of Q criteria, at the same time, this is to test a long title, for instance, this is a really very long very long very long very long very long title.}
     \label{fig:tc_q_criteria}
 \end{figure}
@@ -133,19 +133,18 @@ s_1  &  0  & \cdots\ &0\\
 %				\includegraphics[]{./figures/flowChatOfDWTSVD.jpg}
 %				\caption{DWT-SVD的算法流程图\label{DWT}}
 %			\end{figure}
+图3.5将展示原始图像经过DWT-SVD算法增强后的结果。
 
-以下将展示原始图像经过DWT-SVD算法增强后的结果：
 
-
-\begin{figure}[!htbp]
+\begin{figure}[htb!]
     \centering
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{oriImg11}
       \caption{}
       \label{fig:oaspl_a}
     \end{subfigure}%
     ~%add desired spacing
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{DWTSVD11}
       \caption{}
       \label{fig:oaspl_b}

@@ -10,7 +10,7 @@ gheImgStd =std2(gheImage)
 newImgMean=mean2(newImage)
 newImgStd =std2(newImage)
 
-Y=ssr11;
+Y=newImage;
  p = imhist(Y(:));
 % remove zero entries in p
    p(p==0) = [];  %%%此处于上同理。

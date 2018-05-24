@@ -20,24 +20,24 @@
 
 \begin{figure}[!htbp]
     \centering
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{oriImg11}
       \caption{}
       \label{fig:oaspl_a}
     \end{subfigure}%
     ~%add desired spacing
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{HE11}
       \caption{}
       \label{fig:oaspl_b}
     \end{subfigure}
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{SSR11}
       \caption{}
       \label{fig:oaspl_c}
     \end{subfigure}%
     ~%add desired spacing
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{DWTSVD11}
       \caption{}
       \label{fig:oaspl_d}
@@ -55,15 +55,21 @@
     \footnotesize% fontsize
     \setlength{\tabcolsep}{4pt}% column separation
     \renewcommand{\arraystretch}{1.2}%row space 
+    \setlength{\tabcolsep}{7mm}{
     \begin{tabular}{|r|r|r|r|}
 	  \hline
         算法   			   & 均值 & 标准差 & 信息熵 \\
+	\hline
 	   原始   			   & $140.48$ & $21.35$ & $6.07$ \\
+	\hline
         直方图均衡            & $129.61$ & $73.47$ & $6.04$ \\
+	\hline
         SSR算法			    & $163.49$ & $53.24$ & $7.19$ \\
+	\hline
         DWT-SVD算法       & $147.93$ & $58.64$ & $7.47$ \\
         \hline
-    \end{tabular}
+    \end{tabular}}
+    
 \end{table}
 
 
@@ -71,28 +77,27 @@
 
 			\subsection{第二组实验}第二组实验对具有整体对比度偏低，其中部分地方偏白的特点，拍摄场景为在薄雾天气，阳光较为强烈的条件下拍摄。
 
-图4.2中直方图均衡算法造成了多处地方细节丢失，但也有让观察者更清楚的看清楚建筑轮廓的优点，而SSR算法效果不理想整体偏白，看不清细节，图像效果不如原图，SSR算作作为一种经典的去雾算法在此种场景并不适用。DWT-SVD算法图像效果和原图相差不大，但是在此类图像上的整体效果显然优于直方图均衡和SSR算法增强后的结果。
 
 \begin{figure}[!htbp]
     \centering
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{oriImg16}
       \caption{}
       \label{fig:oaspl_a}
     \end{subfigure}%
     ~%add desired spacing
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{HE16}
       \caption{}
       \label{fig:oaspl_b}
     \end{subfigure}
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{SSR16}
       \caption{}
       \label{fig:oaspl_c}
     \end{subfigure}%
     ~%add desired spacing
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.5\textwidth}
       \includegraphics[width=\textwidth]{DWTSVD16}
       \caption{}
       \label{fig:oaspl_d}
@@ -100,4 +105,32 @@
     \bicaption{总声压级。(a) 这是子图说明信息，(b) 这是子图说明信息，(c) 这是子图说明信息，(d) 这是子图说明信息。}{OASPL.(a) This is the explanation of subfig, (b) This is the explanation of subfig, (c) This is the explanation of subfig, (d) This is the explanation of subfig.}
     \label{fig:oaspl}
 \end{figure}
+
+图4.2中直方图均衡算法造成了多处地方细节丢失，但也有让观察者更清楚的看清楚建筑轮廓的优点，而SSR算法效果不理想整体偏白，看不清细节，图像效果不如原图，SSR算作作为一种经典的去雾算法在此种场景并不适用。DWT-SVD算法图像效果和原图相差不大，但是在此类图像上的整体效果显然优于直方图均衡和SSR算法增强后的结果。
+
+\begin{table}[t!]
+    \bicaption{客观指标}{objective indicator}
+    \label{tab:sample}
+    \centering
+    \footnotesize% fontsize
+    \setlength{\tabcolsep}{4pt}% column separation
+    \renewcommand{\arraystretch}{1.2}%row space 
+    \setlength{\tabcolsep}{7mm}{
+    \begin{tabular}{|r|r|r|r|}
+	  \hline
+        算法   			   & 均值 & 标准差 & 信息熵 \\
+	\hline
+	   原始   			   & $223.61$ & $24.39$ & $6.10$ \\
+	\hline
+        直方图均衡            & $129.94$ & $74.94$ & $6.03$ \\
+	\hline
+        SSR算法			    & $244.36$ & $9.37$ & $4.57$ \\
+	\hline
+        DWT-SVD算法       & $148.39$ & $16.33$ & $6.23$ \\
+        \hline
+    \end{tabular}}
+    
+\end{table}
+
+
 

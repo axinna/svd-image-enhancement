@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  23 MAY 2018 21:21
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.6)  24 MAY 2018 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1769,6 +1769,9 @@ LaTeX Warning: Label `sub@fig:oaspl_d' multiply defined.
 
 LaTeX Warning: Label `fig:oaspl' multiply defined.
 
+
+LaTeX Warning: Label `tab:sample' multiply defined.
+
 )
 \openout1 = `Thesis.aux'.
 
@@ -2043,21 +2046,17 @@ Overfull \hbox (24.22968pt too wide) in paragraph at lines 46--47
 File: retinexSSR.png Graphic file (type bmp)
 <retinexSSR.png>
  [9]
-File: retinexSSR.png Graphic file (type bmp)
-<retinexSSR.png>
+File: retinexSSR1.png Graphic file (type bmp)
+<retinexSSR1.png>
 
-Overfull \hbox (38.12695pt too wide) in paragraph at lines 94--95
+Overfull \hbox (9.67047pt too wide) in paragraph at lines 94--95
  [][] 
  []
 
+[10]
 File: SSR2.jpg Graphic file (type bmp)
 <SSR2.jpg>
-
-Overfull \hbox (38.133pt too wide) in paragraph at lines 115--116
- [][] 
- []
-
-) (./Tex/Chap_DWT-SVD.tex [10] [11] [12
+) (./Tex/Chap_DWT-SVD.tex [11] [12
 
 ]
 第3章
@@ -2066,6 +2065,11 @@ e=DFLT;mapping=tex-text;!
 [13] [14]
 File: DWT.jpg Graphic file (type bmp)
 <DWT.jpg>
+
+Overfull \hbox (38.13483pt too wide) in paragraph at lines 30--31
+ [][] 
+ []
+
 File: LL.jpg Graphic file (type bmp)
 <LL.jpg>
 File: HL.jpg Graphic file (type bmp)
@@ -2074,24 +2078,39 @@ File: LH.jpg Graphic file (type bmp)
 <LH.jpg>
 File: HH.jpg Graphic file (type bmp)
 <HH.jpg>
- [15]
+
+Overfull \hbox (2.00749pt too wide) in paragraph at lines 45--67
+ [][] [] 
+ []
+
+
+Overfull \hbox (2.00749pt too wide) in paragraph at lines 45--67
+ [] [] 
+ []
+
+[15]
 File: IDWTWithoutLL.jpg Graphic file (type bmp)
 <IDWTWithoutLL.jpg>
+ [16]
 
-
-Package natbib Warning: Citation `improved...' on page 16 undefined on input li
+Package natbib Warning: Citation `improved...' on page 17 undefined on input li
 ne 111.
 
-[16]
+[17]
 File: flowChatOfDWTSVD.jpg Graphic file (type bmp)
 <flowChatOfDWTSVD.jpg>
 File: oriImg11.jpg Graphic file (type bmp)
 <oriImg11.jpg>
 File: DWTSVD11.jpg Graphic file (type bmp)
 <DWTSVD11.jpg>
-) (./Tex/Chap_shiYan.tex [17] [18]
+
+Overfull \hbox (2.00749pt too wide) in paragraph at lines 141--152
+ [][] [] 
+ []
+
+) (./Tex/Chap_shiYan.tex [18] [19] [20]
 第4章
-[19
+[21
 
 ]
 File: oriImg11.jpg Graphic file (type bmp)
@@ -2102,7 +2121,17 @@ File: SSR11.jpg Graphic file (type bmp)
 <SSR11.jpg>
 File: DWTSVD11.jpg Graphic file (type bmp)
 <DWTSVD11.jpg>
- [20] [21]
+
+Overfull \hbox (2.00749pt too wide) in paragraph at lines 23--45
+ [][] [] 
+ []
+
+
+Overfull \hbox (2.00749pt too wide) in paragraph at lines 23--45
+ [] [] 
+ []
+
+[22] [23]
 File: oriImg16.jpg Graphic file (type bmp)
 <oriImg16.jpg>
 File: HE16.jpg Graphic file (type bmp)
@@ -2111,32 +2140,42 @@ File: SSR16.jpg Graphic file (type bmp)
 <SSR16.jpg>
 File: DWTSVD16.jpg Graphic file (type bmp)
 <DWTSVD16.jpg>
-) (./Tex/Chap_zongJie.tex [22]
-第5章
-)) [23
 
-] [24
+Overfull \hbox (2.00749pt too wide) in paragraph at lines 83--105
+ [][] [] 
+ []
+
+
+Overfull \hbox (2.00749pt too wide) in paragraph at lines 83--105
+ [] [] 
+ []
+
+) (./Tex/Chap_zongJie.tex [24] [25] [26
+
+]
+第5章
+)) [27] [28
 
 ] (./Tex/Appendix.tex
 附录 A
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 17.
 (j:/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [25
+)) [29
 
-] [26] (Tmp/Thesis.bbl
+] [30] (Tmp/Thesis.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 9.
 
-) (./Tex/Backmatter.tex [27
+) (./Tex/Backmatter.tex [31
 
 
 
-] [28
+] [32
 
-] [29] [30
+] [33] [34
 
-] [31] [32
+] [35] [36
 
 ])
 
@@ -2148,19 +2187,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 84.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B6876345132FE1D408A7C210C1F452C5.
+(rerunfilecheck)             Checksum: E435DCFC2D929D729827857C83080F60.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29618 strings out of 492970
- 585451 string characters out of 6137299
+ 29622 strings out of 492970
+ 585524 string characters out of 6137299
  659786 words of memory out of 5000000
- 33181 multiletter control sequences out of 15000+600000
+ 33184 multiletter control sequences out of 15000+600000
  577999 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,13n,94p,10531b,658s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Tmp/Thesis.pdf (50 pages).
+Output written on Tmp/Thesis.pdf (54 pages).

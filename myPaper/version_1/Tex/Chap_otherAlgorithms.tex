@@ -33,14 +33,14 @@
 \begin{equation}     p_s(s)=p_r(r) \left| \frac{dr}{ds}\right| =p_r(r) \left| \frac{1}{(L-1)p_r(r)} \right| = \frac{1}{L-1},0 \leq s \leq L-1    \end{equation}
 其中，v是积分假变量。公式的右边是随机变量$r$的累计分布函数（cumulative distribution function, CDF）。由公式$(2.5)$得知得到的$p_s(s)$始终是均匀的，与$P_r(r)$无关。简单的来说就是使原始图像的灰度直方图的累计分布函数均匀分布使得原始图像的对比度变高。以下是一个直方图均衡的例子：
 
-\begin{figure}[!htbp]
+\begin{figure}[htb!]
     \centering
-    \includegraphics[width=0.40\textwidth]{histogramExample}
+    \includegraphics[totalheight=100mm]{histogramExample}
     \bicaption{Q判据等值面图，同时测试一下一个很长的标题，比如这真的是一个很长很长很长很长很长很长很长很长的标题。}{Isocontour of Q criteria, at the same time, this is to test a long title, for instance, this is a really very long very long very long very long very long title.}
     \label{fig:tc_q_criteria}
 \end{figure}
 
-从上图可以看出原本对比度很低，模糊不清的原始图像经过直方图均衡后变得更为清晰，视觉效果好。其中，均衡化后图像的灰度直方图形状与原图的灰度直方图相似，只不过被“拉伸"了。直方图均衡有助于图像的增强，但是也有过增强和细节变得更加模糊的缺点。
+从图2.1可以看出原本对比度很低，模糊不清的原始图像经过直方图均衡后变得更为清晰，视觉效果好。其中，均衡化后图像的灰度直方图形状与原图的灰度直方图相似，只不过被“拉伸"了。直方图均衡有助于图像的增强，但是也有过增强和细节变得更加模糊的缺点。
 
 虽然直方图均衡化后的效果比原始图像好，但是所得的图像在一些轮廓和细节方面处理是不如其他常用的增强算法的，会产生轮廓的模糊等现象。
 		\section{Retinex增强算法}	Retinex（Retina-Cortex）理论是在1977年由Edwin Land提出的关于图像增强的理论，器阐述了人通过亮度感知捕捉色度图像在不同亮暗情况下辨认物体的能力。是研究人员模仿人类视觉系统而发展而成的算法，从单尺度Retinex(Single Scale Retinex,ssr)算法改进成多尺度加权平均的Retinex算法（Multi Scale Retinex,msr），再发展成彩色恢复多尺度Retinex算法。由于人眼对亮度、饱和度、对比度拥有相当的分辨能力，基于肉眼视觉感受的航空图像增强有助于观察者分析并且观察航空图像，并从中获取预期的信息和得到预期的视觉效果。Retinex理论包含两个方面的内容：$(1)$物体的色彩具有一致性，不受光的非均匀性的影响。$(2)$物体的颜色不是取决于反射光的强度的绝对值，而是取决于物体对各种波长的发射能力决定的。
@@ -74,7 +74,7 @@ Retinex理论通常广泛在可见光图像增强领域有所应用，而航空�
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.40\textwidth]{retinexSSR}
+    \includegraphics[totalheight=60mm]{retinexSSR}
     \bicaption{Q判据等值面图，同时测试一下一个很长的标题，比如这真的是一个很长很长很长很长很长很长很长很长的标题。}{Isocontour of Q criteria, at the same time, this is to test a long title, for instance, this is a really very long very long very long very long very long title.}
     \label{fig:tc_q_criteria}
 \end{figure}
@@ -84,14 +84,14 @@ Retinex理论通常广泛在可见光图像增强领域有所应用，而航空�
 %				\caption{SSR原理图\label{SSR}}
 %			\end{figure}
 
-如上图所示，入射光照射在反射物体上，通过反射物体的反射形成反射光进入人眼，得到人所见到的图像，用公式表达为：
+如图2.2所示，入射光照射在反射物体上，通过反射物体的反射形成反射光进入人眼，得到人所见到的图像，用公式表达为：
 \begin{equation}     S(x,y)=R(x,y)L(x,y)    \end{equation}	
-其中，$L(x,y)$表示入射图像，他决定了图像中像素多能达到的动态范围，$R(x,y)$表示物体的反射性质图像，即图像的内在属性，$S(x,y)$表示人眼所能接收到的反射光图像。该理论的基本思想是在原始图像中，通过某种方法降低或去除入射图像的影响，从而尽可能保留物体本质的反射属性图像。其一般处理过程如下所示：
+其中，$L(x,y)$表示入射图像，他决定了图像中像素多能达到的动态范围，$R(x,y)$表示物体的反射性质图像，即图像的内在属性，$S(x,y)$表示人眼所能接收到的反射光图像。该理论的基本思想是在原始图像中，通过某种方法降低或去除入射图像的影响，从而尽可能保留物体本质的反射属性图像。其一般处理过程图2.3所示：
 
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[totalheight=30mm,width=160mm]{retinexSSR}
+    \includegraphics[totalheight=30mm,width=150mm]{retinexSSR1}
     \bicaption{Q判据等值面图，同时测试一下一个很长的标题，比如这真的是一个很长很长很长很长很长很长很长很长的标题。}{Isocontour of Q criteria, at the same time, this is to test a long title, for instance, this is a really very long very long very long very long very long title.}
     \label{fig:tc_q_criteria}
 \end{figure}
@@ -112,7 +112,7 @@ Retinex理论通常广泛在可见光图像增强领域有所应用，而航空�
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[totalheight=30mm,width=160mm]{SSR2}
+    \includegraphics[totalheight=50mm,width=140mm]{SSR2}
     \bicaption{Q判据等值面图，同时测试一下一个很长的标题，比如这真的是一个很长很长很长很长很长很长很长很长的标题。}{Isocontour of Q criteria, at the same time, this is to test a long title, for instance, this is a really very long very long very long very long very long title.}
     \label{fig:tc_q_criteria}
 \end{figure}

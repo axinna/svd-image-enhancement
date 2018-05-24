@@ -3,7 +3,7 @@ clear all;
 close all;
 clc;
 %%
-originalImage=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\11.jpg');
+originalImage=imread('C:\Users\Administrator\Documents\GitHub\svd-image-enhancement\Aerial image\16.jpg');
 originalImage=rgb2gray(originalImage);                                      %±‰ª“∂»Õº
 figure;imshow(originalImage);title('');
 figure;
